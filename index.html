@@ -58,7 +58,7 @@
 			<section class="order">
 				<div class="container">
 					<h1 class="section-one">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-					<button type="button" class="order-button">Zamów usługę</button>
+					<button type="button" class="order-button" data-modal-open>Zamów usługę</button>
 				</div>
 			</section>
 			<section class="section section-two">
@@ -123,12 +123,15 @@
 					<ul class="section-three-list">
 						<li>
 							<img src="./images/picture1.jpg" width="370" height="294" alt="keboard" />
+							<div class="label">Aplikacje Komputerowe</div>
 						</li>
 						<li>
 							<img src="./images/picture2.jpg" width="370" height="294" alt="phone" />
+							<div class="label">Aplikacje Mobilne</div>
 						</li>
 						<li>
 							<img src="./images/picture3.jpg" width="370" height="294" alt="tablet" />
+							<div class="label">Rozwiązania graficzne</div>
 						</li>
 					</ul>
 				</div>
@@ -389,5 +392,11 @@
 				</div>
 			</div>
 		</footer>
+		<div class="backdrop is-hidden" data-modal>
+			<div class="modal scale">
+				<button class="btn" type="button" data-modal-close><b>✕</b></button>
+			</div>
+		</div>
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
