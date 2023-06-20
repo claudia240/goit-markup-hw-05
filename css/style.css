@@ -88,18 +88,33 @@ header {
 	line-height: 1.1;
 	letter-spacing: 0.02em;
 	color: #212121;
+	transition: 250ms;
 }
-
-.current {
+.blue-span {
 	color: var(--brand-color);
 }
+.current {
+	color: var(--brand-color);
+	position: relative;
+}
 
+.current::after {
+	content: "";
+	position: absolute;
+	width: 63px;
+	margin-top: 45px;
+	margin-left: -60px;
+	height: 4px;
+	background-color: var(--brand-color);
+	border-radius: 2px;
+}
 .address-link {
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 1.7;
 	letter-spacing: 0.03em;
 	color: white;
+	transition: 250ms;
 }
 .address-link:hover {
 	color: var(--brand-color);
@@ -113,6 +128,7 @@ header {
 	letter-spacing: 0.02em;
 	display: flex;
 	gap: 10px;
+	transition: 250ms;
 }
 
 .contact-link:hover {
@@ -153,6 +169,7 @@ button {
 	color: #212121;
 	background-color: #f5f4fa;
 	cursor: pointer;
+	transition: 250ms;
 }
 
 .portfolio-button:hover,
@@ -435,6 +452,7 @@ button {
 	border: 1px solid currentColor;
 	color: var(--light-grey);
 	border-radius: 4px;
+	transition: 250ms;
 }
 .customers-link:hover,
 .customers-link:focus {
@@ -459,6 +477,7 @@ button {
 	display: flex;
 	gap: 10px;
 	justify-content: center;
+	transition: 250ms;
 }
 
 .social-links {
@@ -469,6 +488,7 @@ button {
 	align-items: center;
 	justify-content: center;
 	color: var(--light-grey);
+	transition: 250ms;
 }
 .social-links-footer {
 	width: 44px;
@@ -554,6 +574,7 @@ footer .icon {
 
 .portfolio-link {
 	display: block;
+	transition: box-shadow 250ms;
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
@@ -570,17 +591,19 @@ footer .icon {
 	top: 0%;
 	right: 0%;
 	animation: backdropOpen 1s forwards 1 ease-in-out;
+	transition: opacity 250ms;
+	visibility: 250ms;
 }
 .modal {
-	position: fixed;
+	position: absolute;
 	height: 581px;
 	width: 528px;
-	top: 19%;
-	right: 34%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	background-color: var(--main-background-color);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
-	animation: modalOpen 1s forwards 1 ease-in-out;
 }
 .btn {
 	position: relative;
