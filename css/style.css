@@ -87,8 +87,8 @@ header {
 	font-size: 14px;
 	line-height: 1.1;
 	letter-spacing: 0.02em;
-	color: #212121;
-	transition: 250ms;
+	padding: 33px 0;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .blue-span {
 	color: var(--brand-color);
@@ -101,9 +101,9 @@ header {
 .current::after {
 	content: "";
 	position: absolute;
-	width: 63px;
-	margin-top: 45px;
-	margin-left: -60px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
 	height: 4px;
 	background-color: var(--brand-color);
 	border-radius: 2px;
@@ -114,8 +114,9 @@ header {
 	line-height: 1.7;
 	letter-spacing: 0.03em;
 	color: white;
-	transition: 250ms;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .address-link:hover {
 	color: var(--brand-color);
 }
@@ -128,7 +129,7 @@ header {
 	letter-spacing: 0.02em;
 	display: flex;
 	gap: 10px;
-	transition: 250ms;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link:hover {
@@ -169,7 +170,9 @@ button {
 	color: #212121;
 	background-color: #f5f4fa;
 	cursor: pointer;
-	transition: 250ms;
+	transition-duration: 250ms;
+	transition-property: color, background-color, box-shadow;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-button:hover,
@@ -452,7 +455,7 @@ button {
 	border: 1px solid currentColor;
 	color: var(--light-grey);
 	border-radius: 4px;
-	transition: 250ms;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-link:hover,
 .customers-link:focus {
@@ -488,7 +491,9 @@ button {
 	align-items: center;
 	justify-content: center;
 	color: var(--light-grey);
-	transition: 250ms;
+	transition-duration: 250ms;
+	transition-property: color, background-color;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-links-footer {
 	width: 44px;
@@ -498,6 +503,9 @@ button {
 	align-items: center;
 	justify-content: center;
 	color: var(--main-background-color);
+	transition-duration: 250ms;
+	transition-property: color, background-color;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links:hover,
@@ -591,8 +599,7 @@ footer .icon {
 	top: 0%;
 	right: 0%;
 	animation: backdropOpen 1s forwards 1 ease-in-out;
-	transition: opacity 250ms;
-	visibility: 250ms;
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
 	position: absolute;
